@@ -1,4 +1,9 @@
 import { Canvas } from "../../lib";
+import { PhysicsObject } from "../../lib/PhysicsObject/PhysicsObject";
+
+class Ball extends PhysicsObject{
+    constructor(){}
+}
 
 export class Gravity{
     public balls:Ball[] = [];
@@ -6,7 +11,7 @@ export class Gravity{
     constructor(parent:HTMLElement){
         this.canvas = new Canvas(parent);
         for(let i=0;i<10;i++){
-            this.balls.push(new Ball(this.canvas));
+            this.balls.push(new Ball());
         }
         this.update();
     }
