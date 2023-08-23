@@ -2,7 +2,7 @@ import { Canvas } from "../../lib";
 import { PhysicsObject } from "../../lib/PhysicsObject/PhysicsObject";
 
 class Ball extends PhysicsObject{
-    constructor(){}
+    
 }
 
 export class Gravity{
