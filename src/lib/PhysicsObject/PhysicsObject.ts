@@ -1,6 +1,6 @@
 import { RayCaster } from "../RayCaster/RayCaster";
 import { Vector } from "../Vector/Vector";
-import { Geometry } from "./Geometry";
+import { CIRCLE, Geometry } from "./Geometry";
 
 export class PhysicsObject{
     public position:Vector;
@@ -49,5 +49,11 @@ export class PhysicsObject{
         ctx.fill();
         ctx.stroke();
         ctx.closePath();
+    }
+    public static CIRCLE(){
+        const output = new PhysicsObject();
+        output.shape = CIRCLE;
+        return output;
+
     }
 }
