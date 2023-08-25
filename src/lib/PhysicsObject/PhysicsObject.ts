@@ -1,6 +1,6 @@
 import { RayCaster } from "../RayCaster/RayCaster";
 import { Vector } from "../Vector/Vector";
-import { CIRCLE, Geometry } from "./Geometry";
+import { BOX, CIRCLE, Geometry } from "./Geometry";
 
 export class PhysicsObject{
     public position:Vector;
@@ -54,6 +54,10 @@ export class PhysicsObject{
         const output = new PhysicsObject();
         output.shape = CIRCLE;
         return output;
-
+    }
+    public static BOX(){
+        const output = new PhysicsObject();
+        output.shape = BOX;
+        return output;
     }
 }
