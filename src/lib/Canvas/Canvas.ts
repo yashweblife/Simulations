@@ -9,7 +9,7 @@ export class Canvas{
         this.dom.height=300;
     }
     public grid(){
-        const rotation_x = new Vector(0 * (180/Math.PI),0 * (180/Math.PI),45* (180/Math.PI));
+        const rotation_x = new Vector(0 * (180/Math.PI),0 * (180/Math.PI),45 * (180/Math.PI));
         const scale = 20;
         const x_lines = [];
         const y_lines = [];
