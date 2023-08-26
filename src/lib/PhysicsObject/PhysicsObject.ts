@@ -36,10 +36,11 @@ export class PhysicsObject{
         ctx.beginPath();
         ctx.moveTo(this.position.components[0], this.position.components[1]);
         this.shape
-        .getRotatedVertices(this.rotation)
         .getScaledXVertices(this.scale.components[0])
         .getScaledYVertices(this.scale.components[1])
+        .getRotatedVertices(this.rotation)
         .getOffsetVertices(this.position)
+        .vertices
         .forEach((vertex)=>{
             ctx.lineTo(vertex.components[0], vertex.components[1]);
         });
