@@ -23,7 +23,7 @@ export class PhysicsObject{
         this.shape=new Geometry(shape);
     }
     public addForce(force:Vector){
-        this.acceleration = force.scale(1/this.mass);
+        this.acceleration = force.normalize(1/this.mass);
     }
     public setMass(mass:number){
         this.mass=mass;
@@ -31,7 +31,7 @@ export class PhysicsObject{
     public update(ctx:CanvasRenderingContext2D){
         this.velocity.add(this.acceleration);
         this.position.add(this.velocity);
-        this.acceleration.scale(0);
+        this.acceleration.normalize(0);
         this.rayCaster.update(ctx);
         ctx.beginPath();
         ctx.moveTo(this.position.components[0], this.position.components[1]);
