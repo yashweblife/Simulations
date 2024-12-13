@@ -7,6 +7,7 @@ export default class PhysicsBody{
     bounding_box:Vector = new Vector();
     mass:number = 1;
     color:string = "red";
+    momentum:Vector = new Vector();
     constructor(){}
     setPos(x:number, y:number){
         this.pos.x = x;
