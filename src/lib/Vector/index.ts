@@ -46,9 +46,12 @@ export default class Vector {
         this.z /= mag;
         return this;
     }
-    scale(v: Vector) {
+    scale(v: number) {
         this.normalize();
-        this.mul(v);
+        this.x *= v;
+        this.y *= v;
+        this.z *= v;
+        return this;
     }
     clone() {
         return new Vector(this.x, this.y, this.z);
@@ -60,6 +63,6 @@ export default class Vector {
         return new Vector(Math.random()*max, Math.random()*max, Math.random()*max);
     }
     static randMinMax(min:number, max:number){
-        return new Vector((Math.floor((Math.random()-0.5)*(max-min)+min)), (Math.floor((Math.random()-0.5)*(max-min)+min)), (Math.floor((Math.random()-0.5)*(max-min)+min)));
+        return new Vector(((Math.random())*(max-min)+min), ((Math.random())*(max-min)+min), ((Math.random())*(max-min)+min));
     }
 }
